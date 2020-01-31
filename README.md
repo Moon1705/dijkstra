@@ -27,7 +27,7 @@ For normal work project you should install python environment.
 
 *On Linux (Dedian):*
 ```
-$ cd 
+$ cd /home/$(whoami)/Downloads
 $ git clone https://github.com/Moon1705/dijkstra.git
 $ cd dijkstra
 $ pip3 install -r requirements.txt
@@ -50,4 +50,22 @@ $ python3 main.py
 *On Windows:*
 ```
 > python main.py
+```
+# Delete project
+  
+If the project is no longer needed.
+*On Linux (Dedian):*
+```
+$ cd ..
+$ rm -rf dijkstra
+$ sudo apt-get uninstall -y python3
+$ sudo apt-get uninstall -y git
+```
+*On Windows:*
+```
+> cd ..
+> remove-item -force -recurse -path .\dijkstra\
+> choco uninstall python3
+> choco uninstall git
+> remove-item -force -recurse -path C:\ProgramData\chocolatey
 ```
