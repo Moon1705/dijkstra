@@ -1,3 +1,4 @@
+
 # Dijkstra's Algorithm
 
 This project shows the operation of the built-in function of the **networkx** module using a specific example.
@@ -23,12 +24,30 @@ On Windows  **Powershell**   with administrator privileges :
 
 # Start project
 For normal work project you should install python environment.
+
+*On Linux (Dedian):*
 ```
-> git clone https://github.com/Moon1705/dijkstra.git
+$ cd 
+$ git clone https://github.com/Moon1705/dijkstra.git
+$ cd dijkstra
+$ pip3 install -r requirements.txt
+```
+*On Windows :*
+```
+> cd "C:\Users\$env:UserName\Downloads\"
+> & 'C:\Program Files\Git\bin\git.exe' clone https://github.com/Moon1705/dijkstra.git
 > cd dijkstra
 > pip3 install -r requirements.txt
+
 ```
 
 And start project!
+
+*On Linux (Dedian):*
 ```
-> python3 main.py
+$ python3 main.py
+```
+*On Windows:*
+```
+> python main.py
+```
