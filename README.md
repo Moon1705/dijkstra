@@ -1,9 +1,11 @@
 
-# Dijkstra's Algorithm
+# Network algorithms
 
-This project shows the operation of the built-in function of the **networkx** module using a specific example.
+The following algorithms are presented in this project:
+* Algorithm Dijkstra;
+* Algorithm Ford-Fulkerson;
+* Algorithm Maximum flow.
 
-![Graph Dijkstra’s algorithm from Wiki](https://upload.wikimedia.org/wikipedia/commons/4/48/Dijkstra_graph2.PNG)
 # Install Python and Git
 Before start this project you should install:
 * install [Python3](https://www.python.org/downloads/);
@@ -28,15 +30,15 @@ For normal work project you should install python environment.
 *On Linux (Dedian):*
 ```
 $ cd /home/$(whoami)/Downloads
-$ git clone https://github.com/Moon1705/dijkstra.git
-$ cd dijkstra
+$ git clone https://github.com/Moon1705/network_USIOI.git
+$ cd network_USIOI
 $ pip3 install -r requirements.txt
 ```
 *On Windows :*
 ```
 > cd "C:\Users\$env:UserName\Downloads\"
-> & 'C:\Program Files\Git\bin\git.exe' clone https://github.com/Moon1705/dijkstra.git
-> cd dijkstra
+> & 'C:\Program Files\Git\bin\git.exe' clone https://github.com/Moon1705/network_USIOI.git
+> cd network_USIOI
 > pip3 install -r requirements.txt
 
 ```
@@ -57,14 +59,14 @@ If the project is no longer needed.
 *On Linux (Dedian):*
 ```
 $ cd ..
-$ rm -rf dijkstra
+$ rm -rf network_USIOI
 $ sudo apt-get uninstall -y python3
 $ sudo apt-get uninstall -y git
 ```
 *On Windows:*
 ```
 > cd ..
-> remove-item -force -recurse -path .\dijkstra\
+> remove-item -force -recurse -path .\network_USIOI\
 > choco uninstall python3
 > choco uninstall git
 > remove-item -force -recurse -path C:\ProgramData\chocolatey
