@@ -1,9 +1,4 @@
 import networkx as nx
-import matplotlib.pyplot as plt
-
-def draw_graph(graph):
-    nx.draw(graph, with_labels=True, font_weight='bold')
-    plt.show()
 
 #Algorithm Dijkstra
 def algorithm_dijkstra(graph):
@@ -22,7 +17,6 @@ def algorithm_dijkstra(graph):
     graph.add_edge('3','7', weight=3)
     result = nx.dijkstra_path(graph, '6', '7')
     print(result)
-    draw_graph(graph)
 
 #Algorithm Ford-Bellman
 def algorithm_ford_bellman(graph):
@@ -55,7 +49,6 @@ def algorithm_ford_bellman(graph):
     graph.add_edge('13','15', weight=2)
     result = nx.bellman_ford(graph, '12')
     print(result)
-    draw_graph(graph)
 
 #Algorithm Maximum flow
 def algorithm_maximum_flow(graph):
@@ -85,7 +78,6 @@ def algorithm_maximum_flow(graph):
     graph.add_edge('t','4', capacity=2)
     result = nx.maximum_flow_value(graph, 's', 't')
     print(result)
-    draw_graph(graph)
 
 
 if __name__ == '__main__':
