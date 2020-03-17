@@ -21,8 +21,6 @@ $ sudo apt-get install -y git
 
 # Start project
 For normal work project you should install python environment.
-
-On Linux (Dedian):
 ```
 $ cd /home/$(whoami)/Downloads
 $ git clone https://github.com/Moon1705/network_USIOI.git
@@ -31,8 +29,6 @@ $ pip3 install -r requirements.txt
 ```
 
 And start project!
-
-On Linux (Dedian):
 ```
 $ python3 main.py
 ```
@@ -40,7 +36,6 @@ $ python3 main.py
 # Delete project
   
 If the project is no longer needed.
-On Linux (Dedian):
 ```
 $ cd ..
 $ rm -rf network_USIOI
