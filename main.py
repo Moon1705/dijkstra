@@ -15,7 +15,8 @@ def algorithm_dijkstra(graph):
 
 #Algorithm Ford-Fulkerson
 def algorithm_ford_fulkerson(graph):
-    graph.add_edges_from([ [1,2,{'capacity':1}], [3,1,{'capacity':2}], [1,9,{'capacity':8}], [1,10,{'capacity':5}], [2,4,{'capacity':4}], [2,3,{'capacity':3}], [4,3,{'capacity':6}], [4,14,{'capacity':4}], [4,5,{'capacity':5}], [5,14,{'capacity':3}], [5,7,{'capacity':1}], [5,6,{'capacity':8}], [14,7,{'capacity':2}], [6,8,{'capacity':3}], [3,6,{'capacity':7}], [6,9,{'capacity':7}], [7,15,{'capacity':6}], [8,15,{'capacity':4}], [8,13,{'capacity':3}], [8,11,{'capacity':9}], [9,13,{'capacity':8}], [9,10,{'capacity':4}], [10,11,{'capacity':3}], [11,12,{'capacity':6}], [12,13,{'capacity':5}], [12,15,{'capacity':1}], [13,15,{'capacity':2}],])    result = edmonds_karp(graph, 's', 't')
+    graph.add_edges_from([ [1,2,{'capacity':1}], [3,1,{'capacity':2}], [1,9,{'capacity':8}], [1,10,{'capacity':5}], [2,4,{'capacity':4}], [2,3,{'capacity':3}], [4,3,{'capacity':6}], [4,14,{'capacity':4}], [4,5,{'capacity':5}], [5,14,{'capacity':3}], [5,7,{'capacity':1}], [5,6,{'capacity':8}], [14,7,{'capacity':2}], [6,8,{'capacity':3}], [3,6,{'capacity':7}], [6,9,{'capacity':7}], [7,15,{'capacity':6}], [8,15,{'capacity':4}], [8,13,{'capacity':3}], [8,11,{'capacity':9}], [9,13,{'capacity':8}], [9,10,{'capacity':4}], [10,11,{'capacity':3}], [11,12,{'capacity':6}], [12,13,{'capacity':5}], [12,15,{'capacity':1}], [13,15,{'capacity':2}],])
+    result = edmonds_karp(graph, 's', 't')
     print(result.graph['flow_value'])
     return graph
 
