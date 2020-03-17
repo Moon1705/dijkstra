@@ -1,5 +1,4 @@
 import networkx as nx
-from networkx.algorithms.flow import edmonds_karp
 import matplotlib.pyplot as plt
 
 def draw_graph(graph):
@@ -26,28 +25,77 @@ def algorithm_dijkstra(graph):
     draw_graph(graph)
 
 #Algorithm Ford-Bellman
-def algorithm_ford_fulkerson(graph):
-    graph.add_edges_from([ [1,2,{'capacity':1}], [3,1,{'capacity':2}], [1,9,{'capacity':8}], [1,10,{'capacity':5}], [2,4,{'capacity':4}], [2,3,{'capacity':3}], [4,3,{'capacity':6}], [4,14,{'capacity':4}], [4,5,{'capacity':5}], [5,14,{'capacity':3}], [5,7,{'capacity':1}], [5,6,{'capacity':8}], [14,7,{'capacity':2}], [6,8,{'capacity':3}], [3,6,{'capacity':7}], [6,9,{'capacity':7}], [7,15,{'capacity':6}], [8,15,{'capacity':4}], [8,13,{'capacity':3}], [8,11,{'capacity':9}], [9,13,{'capacity':8}], [9,10,{'capacity':4}], [10,11,{'capacity':3}], [11,12,{'capacity':6}], [12,13,{'capacity':5}], [12,15,{'capacity':1}], [13,15,{'capacity':2}],])
-    result = edmonds_karp(graph, 's', 't')
-    print(result.graph['flow_value'])
-    return graph
+def algorithm_ford_bellman(graph):
+    graph.add_edge('1','2', weight=1)
+    graph.add_edge('1','3', weight=2)
+    graph.add_edge('1','9', weight=8)
+    graph.add_edge('1','10', weight=5)
+    graph.add_edge('2','4', weight=4)
+    graph.add_edge('2','3', weight=3)
+    graph.add_edge('3','4', weight=6)
+    graph.add_edge('4','14', weight=4)
+    graph.add_edge('4','5', weight=5)
+    graph.add_edge('5','14', weight=3)
+    graph.add_edge('5','7', weight=1)
+    graph.add_edge('5','6', weight=8)
+    graph.add_edge('7','14', weight=2)
+    graph.add_edge('6','8', weight=3)
+    graph.add_edge('6','3', weight=7)
+    graph.add_edge('6','9', weight=7)
+    graph.add_edge('7','15', weight=6)
+    graph.add_edge('8','15', weight=4)
+    graph.add_edge('8','13', weight=3)
+    graph.add_edge('8','11', weight=9)
+    graph.add_edge('9','13', weight=8)
+    graph.add_edge('9','10', weight=4)
+    graph.add_edge('10','11', weight=3)
+    graph.add_edge('11','12', weight=6)
+    graph.add_edge('12','13', weight=5)
+    graph.add_edge('12','15', weight=1)
+    graph.add_edge('13','15', weight=2)
+    result = nx.bellman_ford(graph, '12')
+    print(result)
+    draw_graph(graph)
 
 #Algorithm Maximum flow
 def algorithm_maximum_flow(graph):
-    graph.add_edges_from([ ['s','a',{'capacity':4.0}], ['s','c',{'capacity':3.0}], ['a','b',{'capacity':4.0}], ['b','c',{'capacity':3.0}], ['c','d',{'capacity':6.0}], ['b','t',{'capacity':2.0}], ['d','t',{'capacity':6.0}], ])
-    flow_value, flow_dict = nx.maximum_flow(graph, 's', 't')
-    print(flow_value)
-    print(flow_dict)
-    return graph
+    graph.add_edge('s','1', capacity=8)
+    graph.add_edge('1','s', capacity=2)
+    graph.add_edge('s','2', capacity=11)
+    graph.add_edge('2','s', capacity=159)
+    graph.add_edge('s','3', capacity=159)
+    graph.add_edge('3','s', capacity=20)
+    graph.add_edge('s','4', capacity=12)
+    graph.add_edge('4','s', capacity=11)
+    graph.add_edge('1','2', capacity=2)
+    graph.add_edge('2','1', capacity=2)
+    graph.add_edge('1','3', capacity=1)
+    graph.add_edge('3','1', capacity=15)
+    graph.add_edge('1','4', capacity=2)
+    graph.add_edge('4','1', capacity=1)
+    graph.add_edge('2','3', capacity=7)
+    graph.add_edge('3','2', capacity=8)
+    graph.add_edge('2','t', capacity=8)
+    graph.add_edge('t','2', capacity=11)
+    graph.add_edge('3','4', capacity=0)
+    graph.add_edge('4','3', capacity=15)
+    graph.add_edge('3','t', capacity=99)
+    graph.add_edge('t','3', capacity=12)
+    graph.add_edge('4','t', capacity=12)
+    graph.add_edge('t','4', capacity=2)
+    result = nx.maximum_flow_value(graph, 's', 't')
+    print(result)
+    draw_graph(graph)
 
-graph = nx.Graph()
 
-print('Network algorithm:\n[1] Algorithm Dijkstra;\n[2] Algorithm Ford-Fulkerson;\n[3] Algorithm Maximum flow;\n\n')
-command = input('Enter number of algorithm: ')
 
-if command == '1': algorithm_dijkstra(graph)
-elif command == '2': algorithm_ford_fulkerson(graph)
-elif command == '3': algorithm_maximum_flow(graph)
-else: print('Unknown command!')
+if if __name__ == '__main__':
+    while(True):
+        print('Network algorithm:\n[1] Algorithm Dijkstra;\n[2] Algorithm Ford-Bellman;\n[3] Algorithm Maximum flow;\n\n')
+        command = input('Enter number of algorithm: ')
+        if command == '1': algorithm_dijkstra(nx.Graph())
+        elif command == '2': algorithm_ford_bellman(nx.Graph())
+        elif command == '3': algorithm_maximum_flow(nx.DiGraph())
+        elif (command == 'q') or (command == 'Q') or (command == 'й') or (command == 'Й'): break
+        else: print('Unknown command!')
 
-draw_graph(graph)
