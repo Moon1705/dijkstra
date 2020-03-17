@@ -18,12 +18,6 @@ $ sudo apt-get update
 $ sudo apt-get install -y python3
 $ sudo apt-get install -y git
 ```
-On Windows  **Powershell**   with administrator privileges :
-```
-> Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-> choco install -y python3
-> choco install -y git
-```
 
 # Start project
 For normal work project you should install python environment.
@@ -35,14 +29,6 @@ $ git clone https://github.com/Moon1705/network_USIOI.git
 $ cd network_USIOI
 $ pip3 install -r requirements.txt
 ```
-*On Windows :*
-```
-> cd "C:\Users\$env:UserName\Downloads\"
-> & 'C:\Program Files\Git\bin\git.exe' clone https://github.com/Moon1705/network_USIOI.git
-> cd network_USIOI
-> pip3 install -r requirements.txt
-
-```
 
 And start project!
 
@@ -50,10 +36,7 @@ And start project!
 ```
 $ python3 main.py
 ```
-*On Windows:*
-```
-> python main.py
-```
+
 # Delete project
   
 If the project is no longer needed.
@@ -63,12 +46,4 @@ $ cd ..
 $ rm -rf network_USIOI
 $ sudo apt-get uninstall -y python3
 $ sudo apt-get uninstall -y git
-```
-*On Windows:*
-```
-> cd ..
-> remove-item -force -recurse -path .\network_USIOI\
-> choco uninstall python3
-> choco uninstall git
-> remove-item -force -recurse -path C:\ProgramData\chocolatey
 ```
