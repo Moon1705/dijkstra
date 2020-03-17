@@ -88,8 +88,7 @@ def algorithm_maximum_flow(graph):
     draw_graph(graph)
 
 
-
-if if __name__ == '__main__':
+if __name__ == '__main__':
     while(True):
         print('Network algorithm:\n[1] Algorithm Dijkstra;\n[2] Algorithm Ford-Bellman;\n[3] Algorithm Maximum flow;\n\n')
         command = input('Enter number of algorithm: ')
