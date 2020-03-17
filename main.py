@@ -82,7 +82,7 @@ def algorithm_maximum_flow(graph):
 
 if __name__ == '__main__':
     while(True):
-        print('\n\nNetwork algorithm:\n[1] Algorithm Dijkstra;\n[2] Algorithm Ford-Bellman;\n[3] Algorithm Maximum flow;\n\n')
+        print('\n\nNetwork algorithm:\n[1] Algorithm Dijkstra;\n[2] Algorithm Ford-Bellman;\n[3] Algorithm Maximum flow;\n[q or Q] Quit\n\n')
         command = input('Enter number of algorithm: ')
         if command == '1': algorithm_dijkstra(nx.Graph())
         elif command == '2': algorithm_ford_bellman(nx.Graph())
