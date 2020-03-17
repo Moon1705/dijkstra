@@ -16,7 +16,7 @@ def algorithm_dijkstra(graph):
     graph.add_edge('7','8', weight=8)
     graph.add_edge('3','7', weight=3)
     result = nx.dijkstra_path(graph, '6', '7')
-    print(result)
+    print(' -> '.join(result))
 
 #Algorithm Ford-Bellman
 def algorithm_ford_bellman(graph):
@@ -78,7 +78,7 @@ def algorithm_maximum_flow(graph):
     graph.add_edge('4','t', capacity=12)
     graph.add_edge('t','4', capacity=2)
     result = nx.maximum_flow_value(graph, 's', 't')
-    print(result)
+    print("Max flow: " + str(result))
 
 
 if __name__ == '__main__':
