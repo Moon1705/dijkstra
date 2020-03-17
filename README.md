@@ -3,7 +3,7 @@
 
 The following algorithms are presented in this project:
 * Algorithm Dijkstra;
-* Algorithm Ford-Fulkerson;
+* Algorithm Ford-Bellman;
 * Algorithm Maximum flow.
 
 # Install Python and Git
