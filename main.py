@@ -1,6 +1,5 @@
 import networkx as nx
 
-#Algorithm Dijkstra
 def algorithm_dijkstra(graph):
     graph.add_edge('1','5', weight=4)
     graph.add_edge('1','7', weight=1)
@@ -18,7 +17,6 @@ def algorithm_dijkstra(graph):
     result = nx.dijkstra_path(graph, '6', '7')
     print(' -> '.join(result))
 
-#Algorithm Ford-Bellman
 def algorithm_ford_bellman(graph):
     graph.add_edge(1,2, weight=1)
     graph.add_edge(1,3, weight=2)
@@ -51,7 +49,6 @@ def algorithm_ford_bellman(graph):
     for k, v in result.items():
         print('Point ' + str(k) + ":\t" + str(v))
 
-#Algorithm Maximum flow
 def algorithm_maximum_flow(graph):
     graph.add_edge('s','1', capacity=8)
     graph.add_edge('1','s', capacity=2)
