@@ -4,7 +4,8 @@
 The following algorithms are presented in this project:
 * Algorithm Dijkstra;
 * Algorithm Ford-Bellman;
-* Algorithm Maximum flow.
+* Algorithm Maximum flow;
+* Reservation in communication networks.
 
 # Install Python and Git
 Before start this project you should install:
