@@ -47,7 +47,7 @@ def algorithm_ford_bellman(graph):
     graph.add_edge('12','13', weight=5)
     graph.add_edge('12','15', weight=1)
     graph.add_edge('13','15', weight=2)
-    result = nx.bellman_ford(graph, '12')
+    result = nx.bellman_ford(graph, '12')[1]
     print(result)
 
 #Algorithm Maximum flow
