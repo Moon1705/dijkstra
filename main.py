@@ -102,7 +102,7 @@ def reservation_communication_networks():
         if element[1] == element_max:
             print("Pow:\t" + str(element[0]))
             print("C:\t" + str(element[1]))
-            print("Q:\t" + str(element[2]))
+            print("q:\t" + str(element[2]))
 
 
 if __name__ == '__main__':
